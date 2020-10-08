@@ -5,7 +5,7 @@ const ComprarCasco = new Promise((resolve,reject) =>{
             idCliente: 12355
         })
     }, 1000);
-})
+});
 
 const ComprarGuantes = new Promise((resolve,reject) =>{
     setTimeout(() => {
@@ -14,7 +14,7 @@ const ComprarGuantes = new Promise((resolve,reject) =>{
             idCliente: 1245
         })
     }, 2000);
-})
+});
 
 const IrDePaseo = new Promise((resolve,reject) =>{
     setTimeout(() => {
@@ -23,11 +23,11 @@ const IrDePaseo = new Promise((resolve,reject) =>{
             distancia: 30
         })
     }, 8000);
-})
+});
 
 
 const Paseo = () =>{
-    IrDePaseo
+    ComprarCasco
         .then(infoPago => {
             console.log(infoPago);
             return ComprarCasco;
